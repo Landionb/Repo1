@@ -3,13 +3,15 @@ import java.awt.*;
 
 public class mainWindow extends JPanel implements Runnable {
 
+    public static final int WIDTH = 1280;
+    public static final int HEIGTH = 720;
     final int FPS = 60;
     Thread gameThread;
     PlayManager pm;
 
     public mainWindow(){
         //ajustes del panel
-        this.setPreferredSize(new Dimension(1280, 720));
+        this.setPreferredSize(new Dimension(WIDTH, HEIGTH));
         this.setBackground(Color.black);
         this.setLayout(null);
 
@@ -49,5 +51,7 @@ public class mainWindow extends JPanel implements Runnable {
 
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+        pm.draw(g2);
+
     }
 }

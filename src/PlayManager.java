@@ -2,7 +2,6 @@ import java.awt.*;
 
 public class PlayManager {
 
-
     //dibujar el Area
     //manejar las fichas
     //manejar las acciones(dibujar lineas, scores..)
@@ -33,5 +32,12 @@ public class PlayManager {
         g2.setStroke(new BasicStroke(4f));
         g2.drawRect(left_x-4, top_y-4, WIDTH+8, HEIGTH+8);
 
+        int x = right_x + 100;
+        int y = bottom_y -200;
+        g2.drawRect(x, y , 200, 200);
+
+        g2.setFont(new Font("Arial", Font.PLAIN, 30));
+        g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        g2.drawString("NEXT", x+60, y+60);
     }
 }
